@@ -1,0 +1,15 @@
+{
+  "name": "browser-support",
+  "repo": "timoxley/browser-support",
+  "description": "Test browser feature support. Extracted from jQuery.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "enyo/domready": "*",
+    "timoxley/assert": "*"
+  },
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}
