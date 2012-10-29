@@ -1,4 +1,5 @@
 var assert = require('timoxley-assert')
+var domready = require('enyo-domready')()
 var test = it
 
 var ok = assert.ok
@@ -52,7 +53,7 @@ describe("support", function() {
 		//strictEqual( shrinkWrapBlocks, jQuery.support.shrinkWrapBlocks, "jQuery.support.shrinkWrapBlocks properties are the same" );
 	//});
 
-	test('support', function() {
+	test('support', function(done) {
 		var userAgent = window.navigator.userAgent,
 			expected;
 
@@ -257,21 +258,25 @@ describe("support", function() {
 				"doesNotIncludeMarginInBodyOffset":true
 			};
 		}
+    domready(function() {
+      setTimeout(function() {
+      if ( expected ) {
+        test("Verify that the support tests resolve as expected per browser", function() {
+          var count = 0
+          var expect = 30
 
-		if ( expected ) {
-			test("Verify that the support tests resolve as expected per browser", function() {
-				var count = 0
-				var expect = 30
-
-				for ( var i in expected ) {
-					if ( i !== "ajax" && i !== "cors" ) {
-						equal( support[i], expected[i], "support['" + i + "']: " + support[i] + ", expected['" + i + "']: " + expected[i]);
-					}
-				}
-				equal(count, expected)
-			});
-		} else {
-			console.warn('Did not test expected support settings. ')
-		}
+          for ( var i in expected ) {
+            if ( i !== "ajax" && i !== "cors" ) {
+              equal( support[i], expected[i], "support['" + i + "']: " + support[i] + ", expected['" + i + "']: " + expected[i]);
+            }
+          }
+          equal(count, expected)
+        });
+      } else {
+        console.warn('Did not test expected support settings. ')
+      }
+      done()
+    }, 0)
+    })
 	})
 })
