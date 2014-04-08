@@ -266,4 +266,3 @@ module.exports = (function() {
 
 	return support;
 })();
-
