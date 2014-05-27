@@ -1,4 +1,4 @@
-var domready = require('domready')()
+var domready = require('domready')
 
 module.exports = (function() {
 
