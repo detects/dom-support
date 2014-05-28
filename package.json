@@ -1,7 +1,7 @@
 {
   "name": "dom-support",
   "description": "Test browser rendering/styling quirks. Extracted from jQuery",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "keywords": [
     "browser"
   ],
@@ -15,6 +15,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/timoxley/dom-support.git"
+    "url": "https://github.com/detects/dom-support.git"
   }
 }
