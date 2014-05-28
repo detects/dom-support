@@ -5,7 +5,7 @@
 
 ## Installation
 
-    $ component install timoxley/dom-support
+    $ component install detects/dom-support
 
 ## Usage
 
@@ -55,7 +55,7 @@ Tests for enctype support on a form
 Makes sure cloning an html5 element does not cause problems
 
 ### submitBubbles, changeBubbles, focusinBubbles
-Detect support for bubbling the corresponding event in non-standard event systems (namely IE). 
+Detect support for bubbling the corresponding event in non-standard event systems (namely IE).
 
 ### deleteExpando
 Test to see if it's possible to delete an expando from an element (Fails
