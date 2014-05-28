@@ -1,8 +1,8 @@
 {
   "name": "dom-support",
-  "repository": "timoxley/dom-support",
+  "repository": "detects/dom-support",
   "description": "Test browser rendering/styling quirks. Extracted from jQuery",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [],
   "dependencies": {
     "enyo/domready": "*"
